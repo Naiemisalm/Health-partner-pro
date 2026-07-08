@@ -2,6 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 
+
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Layout from "./Layout/Layout";
@@ -17,6 +19,12 @@ import Contact from "./components/pages/Contact/Contact";
 import Blog from "./components/pages/Blog/Blog";
 import Login from "./components/Login/Login";
 import Register from "./components/Login/Register";
+import GeneralConsultation from "./components/pages/Services/GeneralConsultation/GeneralConsultation";
+import DiagnosticServices from "./components/pages/Services/DiagnosticServices/DiagnosticServices";
+import CardiologyCare from "./components/pages/Services/GeneralConsultation/CardiologyCare/CardiologyCare";
+import WomenHealthcare from "./components/pages/Services/WomenHealthcare/WomenHealthcare";
+import ChildHealthcare from "./components/pages/Services/ChildHealthcare/ChildHealthcare";
+import Telemedicine from "./components/pages/Services/Telemedicine/Telemedicine";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +50,30 @@ const router = createBrowserRouter([
       {
         path: "department/:slug",
         element: <DepartmentDetails />,
+      },
+      {
+        path: "/general-consultation",
+        element: <GeneralConsultation />,
+      },
+      {
+        path: "/diagnostic-services",
+        element: <DiagnosticServices />,
+      },
+      {
+        path: "/cardiology-care",
+        element: <CardiologyCare />,
+      },
+      {
+        path: "/women-healthcare",
+        element: <WomenHealthcare />,
+      },
+      {
+        path: "/child-healthcare",
+        element: <ChildHealthcare />,
+      },
+      {
+        path: "/telemedicine",
+        element: <Telemedicine/>,
       },
       {
         path: "/admin",

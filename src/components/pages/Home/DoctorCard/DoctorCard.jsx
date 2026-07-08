@@ -7,9 +7,7 @@ export default function DoctorCard({ doctor, onProfile }) {
 
   const handleBook = () => {
 
-    const isLoggedIn = localStorage.getItem(
-      "isLoggedIn"
-    );
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
 
 
     if (isLoggedIn === "true") {
@@ -20,13 +18,10 @@ export default function DoctorCard({ doctor, onProfile }) {
 
       alert("Please login first to book appointment");
 
-
       navigate("/login", {
-
         state: {
           from: `/appointment/${doctor.id}`
         }
-
       });
 
     }
@@ -35,35 +30,54 @@ export default function DoctorCard({ doctor, onProfile }) {
 
 
   return (
-    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-5 flex flex-col gap-4">
+
+    <div className="
+      bg-white
+      rounded-2xl
+      shadow-md
+      hover:shadow-xl
+      transition
+      duration-300
+      p-4
+      flex
+      flex-col
+      gap-3
+    ">
 
 
-      {/* TOP SECTION */}
+      {/* TOP */}
 
-      <div className="flex items-start gap-4">
-
-
-        {/* IMAGE */}
-
-        <div>
-
-          <img
-            src={doctor.image}
-            alt={doctor.name}
-            className="w-24 h-24 rounded-full object-cover border-4 border-green-100"
-          />
-
-        </div>
+      <div className="
+        flex
+        items-center
+        gap-3
+      ">
 
 
+        <img
+          src={doctor.image}
+          alt={doctor.name}
+          className="
+            w-20
+            h-20
+            rounded-full
+            object-cover
+            border-4
+            border-green-100
+          "
+        />
 
 
-        {/* DOCTOR INFO */}
 
         <div className="flex-1">
 
 
-          <h2 className="text-lg font-bold text-gray-800">
+          <h2 className="
+            text-base
+            font-bold
+            text-gray-800
+            leading-tight
+          ">
 
             {doctor.name}
 
@@ -71,7 +85,12 @@ export default function DoctorCard({ doctor, onProfile }) {
 
 
 
-          <p className="text-sm text-green-600 font-semibold mt-1">
+          <p className="
+            text-sm
+            text-green-600
+            font-semibold
+            mt-1
+          ">
 
             🩺 {doctor.specialty}
 
@@ -79,12 +98,16 @@ export default function DoctorCard({ doctor, onProfile }) {
 
 
 
-          <div className="flex items-center gap-1 mt-2">
+          <div className="
+            flex
+            items-center
+            gap-1
+            mt-1
+          ">
 
-            <span className="text-yellow-500">
+            <span className="text-yellow-500 text-sm">
               ⭐⭐⭐⭐⭐
             </span>
-
 
             <span className="text-xs text-gray-500">
               (5.0)
@@ -103,41 +126,41 @@ export default function DoctorCard({ doctor, onProfile }) {
 
 
 
-
       {/* DETAILS */}
 
-      <div className="bg-gray-50 rounded-xl p-3 space-y-2 text-sm text-gray-700">
+      <div className="
+        bg-gray-50
+        rounded-xl
+        p-3
+        space-y-2
+        text-sm
+        text-gray-700
+      ">
 
 
         <p>
           📍 Location:
-
           <span className="font-medium ml-1">
             {doctor.location}
           </span>
-
         </p>
 
 
 
         <p>
           💼 Experience:
-
           <span className="font-medium ml-1">
             {doctor.experience}
           </span>
-
         </p>
 
 
 
         <p>
-          💰 Consult Fee:
-
+          💰 Fee:
           <span className="text-green-600 font-bold ml-1">
             BDT ৳{doctor.fee}
           </span>
-
         </p>
 
 
@@ -148,18 +171,27 @@ export default function DoctorCard({ doctor, onProfile }) {
 
 
 
-
       {/* BUTTONS */}
 
-      <div className="flex gap-3 mt-2">
+      <div className="
+        flex
+        gap-2
+      ">
 
 
         <button
-
           onClick={handleBook}
-
-          className="flex-1 bg-green-600 hover:bg-green-700 text-white py-2.5 rounded-xl font-medium transition"
-
+          className="
+            flex-1
+            bg-green-600
+            hover:bg-green-700
+            text-white
+            py-2.5
+            rounded-xl
+            text-sm
+            font-semibold
+            transition
+          "
         >
 
           Book Now
@@ -169,13 +201,19 @@ export default function DoctorCard({ doctor, onProfile }) {
 
 
 
-
         <button
-
           onClick={() => onProfile(doctor)}
-
-          className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 py-2.5 rounded-xl font-medium"
-
+          className="
+            flex-1
+            bg-gray-100
+            hover:bg-gray-200
+            text-gray-700
+            py-2.5
+            rounded-xl
+            text-sm
+            font-semibold
+            transition
+          "
         >
 
           View Profile
@@ -183,11 +221,10 @@ export default function DoctorCard({ doctor, onProfile }) {
         </button>
 
 
-
       </div>
 
 
-
     </div>
+
   );
 }
