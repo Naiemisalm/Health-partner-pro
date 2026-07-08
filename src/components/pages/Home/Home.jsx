@@ -5,6 +5,7 @@ import HomePage from "./DoctorCard/HomePage";
 import HealthCheckupPackages from "./HealthCheckupPackages/HealthCheckupPackages";
 import HeroCarousel from "./Hero/HeroCarousel";
 import MedicalRecords from "./MedicalRecords/MedicalRecords";
+import Speciality from "./Speciality/Speciality";
 import Testimonials from "./Testimonials/Testimonials";
 
 
@@ -12,6 +13,8 @@ const About = () => {
   return (
     <div>
            <HeroCarousel/>
+                 <Speciality />
+
            <Services/>
            <HomePage/>
            <HealthCheckupPackages/>

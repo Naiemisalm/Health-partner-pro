@@ -27,19 +27,19 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4 mt-5">
-            <a href="#" className="hover:text-blue-500">
+            <a href="#" className="hover:text-blue-500 transition">
               <FaFacebookF />
             </a>
 
-            <a href="#" className="hover:text-blue-500">
+            <a href="#" className="hover:text-blue-500 transition">
               <FaTwitter />
             </a>
 
-            <a href="#" className="hover:text-blue-500">
+            <a href="#" className="hover:text-blue-500 transition">
               <FaInstagram />
             </a>
 
-            <a href="#" className="hover:text-blue-500">
+            <a href="#" className="hover:text-blue-500 transition">
               <FaLinkedinIn />
             </a>
           </div>
@@ -52,26 +52,26 @@ export default function Footer() {
           </h3>
 
           <ul className="space-y-3">
-            <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
-            <li><Link to="/about" className="hover:text-blue-500">About</Link></li>
-            <li><Link to="/doctors" className="hover:text-blue-500">Doctors</Link></li>
-            <li><Link to="/department" className="hover:text-blue-500">Departments</Link></li>
-            <li><Link to="/contact" className="hover:text-blue-500">Contact</Link></li>
+            <li><Link to="/" className="hover:text-blue-500 transition">Home</Link></li>
+            <li><Link to="/about" className="hover:text-blue-500 transition">About</Link></li>
+            <li><Link to="/doctors" className="hover:text-blue-500 transition">Doctors</Link></li>
+            <li><Link to="/department" className="hover:text-blue-500 transition">Departments</Link></li>
+            <li><Link to="/contact" className="hover:text-blue-500 transition">Contact</Link></li>
           </ul>
         </div>
 
-        {/* Services */}
+        {/* Our Services */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-4">
             Our Services
           </h3>
 
           <ul className="space-y-3">
-            <li>Cardiology</li>
-            <li>Dental Care</li>
-            <li>Neurology</li>
-            <li>Emergency Care</li>
-            <li>Online Consultation</li>
+            <li><Link to="/cardiology" className="hover:text-blue-500 transition">Cardiology</Link></li>
+            <li><Link to="/dental-care" className="hover:text-blue-500 transition">Dental Care</Link></li>
+            <li><Link to="/neurology" className="hover:text-blue-500 transition">Neurology</Link></li>
+            <li><Link to="/emergency-care" className="hover:text-blue-500 transition">Emergency Care</Link></li>
+            <li><Link to="/online-consultation" className="hover:text-blue-500 transition">Online Consultation</Link></li>
           </ul>
         </div>
 
@@ -88,6 +88,7 @@ export default function Footer() {
             <p>🕒 Sat - Thu : 9AM - 10PM</p>
           </div>
         </div>
+
       </div>
 
       {/* Bottom */}
