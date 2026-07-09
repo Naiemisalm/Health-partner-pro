@@ -56,7 +56,53 @@ rating:4.9,
 reviews:210,
 about:"Providing modern healthcare consultation with patient friendly service.",
 image:"https://randomuser.me/api/portraits/women/44.jpg"
-}
+},
+{
+id:101,
+name:"Dr. Arif Hossain",
+speciality:"Cardiologist",
+degree:"MBBS, FCPS (Cardiology)",
+experience:15,
+hospital:"National Heart Foundation Hospital",
+location:"Dhaka",
+fee:1200,
+rating:4.9,
+reviews:320,
+about:"Heart specialist providing advanced cardiac treatment.",
+image:"https://randomuser.me/api/portraits/men/11.jpg"
+},
+
+
+{
+id:102,
+name:"Dr. Sadia Rahman",
+speciality:"Cardiologist",
+degree:"MBBS, MD Cardiology",
+experience:12,
+hospital:"Evercare Hospital",
+location:"Dhaka",
+fee:1000,
+rating:4.8,
+reviews:250,
+about:"Specialist in heart disease treatment.",
+image:"https://randomuser.me/api/portraits/women/12.jpg"
+},
+
+
+{
+id:103,
+name:"Dr. Mahmud Hasan",
+speciality:"Cardiologist",
+degree:"MBBS, FCPS",
+experience:10,
+hospital:"Parkview Hospital",
+location:"Chittagong",
+fee:900,
+rating:4.7,
+reviews:180,
+about:"Experienced cardiologist.",
+image:"https://randomuser.me/api/portraits/men/15.jpg"
+},
 
 ];
 

@@ -42,8 +42,13 @@ import GeneralPhysician from "./components/pages/Home/Speciality/SpecialityDetai
 // Doctor Profile
 import DoctorProfile from "./components/pages/Home/Speciality/SpecialityDetails/GeneralPhysician/DoctorProfile";
 import AppointmentBooking from "./components/pages/Home/Speciality/SpecialityDetails/GeneralPhysician/AppointmentBooking";
-
-
+import Cardiologist from "./components/pages/Home/Speciality/SpecialityDetails/Cardiologist/Cardiologist";
+import Neurologist from "./components/pages/Home/Speciality/SpecialityDetails/Neurologist/Neurologist";
+import NeurologistDoctorsProfile from "./components/pages/Home/Speciality/SpecialityDetails/Neurologist/NeurologistDoctorsProfile";
+import NeurologistBooking from "./components/pages/Home/Speciality/SpecialityDetails/Neurologist/NeurologistBooking";
+import Orthopedic from "./components/pages/Home/Speciality/SpecialityDetails/Orthopedic/Orthopedic";
+import OrthopedicDoctorsProfile from "./components/pages/Home//Speciality/SpecialityDetails/Orthopedic/OrthopedicDoctorsProfile";
+import OrthopedicBooking from "./components/pages/Home/Speciality/SpecialityDetails/Orthopedic/OrthopedicBooking";
 
 const router = createBrowserRouter([
 
@@ -200,11 +205,39 @@ path:"general-physician",
 element:<GeneralPhysician/>
 },
 {
-  path:"appointment-booking/:id",
-  element:<AppointmentBooking/>
+path:"cardiologist",
+element:<Cardiologist/>
+},
+
+// Neurologist Details
+{
+path:"neurologist",
+element:<Neurologist/>
+},
+{
+path:"/neurologist-doctor/:id",
+element:<NeurologistDoctorsProfile/>
+},
+{
+  path:"/neurologist-booking/:id",
+  element:<NeurologistBooking/>
 },
 
 
+// orthopedic Details
+
+{
+  path:"orthopedic",
+  element:<Orthopedic/>
+},
+{
+  path:"/orthopedic-doctors-profile/:id",
+  element:<OrthopedicDoctorsProfile/>
+},
+{
+  path:"//orthopedic-booking/:id",
+  element:<OrthopedicBooking/>
+},
 
 
 
