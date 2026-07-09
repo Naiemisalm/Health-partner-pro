@@ -52,6 +52,9 @@ import OrthopedicBooking from "./components/pages/Home/Speciality/SpecialityDeta
 import Dentist from "./components/pages/Home/Speciality/SpecialityDetails/Dentist/Dentist";
 import DentistDoctorsProfile from "./components/pages/Home/Speciality/SpecialityDetails/Dentist/DentistDoctorsProfile";
 import DentistBooking from "./components/pages/Home/Speciality/SpecialityDetails/Dentist/DentistBooking";
+import Dermatologist from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/Dermatologist";
+import DermatologistDoctorsProfile  from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistDoctorsProfile";
+import DermatologistBooking  from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistBooking";
 
 const router = createBrowserRouter([
 
@@ -256,6 +259,21 @@ element:<NeurologistDoctorsProfile/>
   path:"//dentist-booking/:id",
   element:<DentistBooking/>
 },
+
+// Dermatologist Details
+
+{
+  path:"dermatologist",
+  element:<Dermatologist/>
+}, 
+{
+  path:"/dermatologist-doctors-profile/:id",
+  element:<DermatologistDoctorsProfile/>
+}, 
+{
+  path:"/dermatologist-booking/:id",
+  element:<DermatologistBooking/>
+}, 
 
 {
 path:"admin",
