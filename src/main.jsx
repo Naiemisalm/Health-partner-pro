@@ -49,6 +49,9 @@ import NeurologistBooking from "./components/pages/Home/Speciality/SpecialityDet
 import Orthopedic from "./components/pages/Home/Speciality/SpecialityDetails/Orthopedic/Orthopedic";
 import OrthopedicDoctorsProfile from "./components/pages/Home//Speciality/SpecialityDetails/Orthopedic/OrthopedicDoctorsProfile";
 import OrthopedicBooking from "./components/pages/Home/Speciality/SpecialityDetails/Orthopedic/OrthopedicBooking";
+import Dentist from "./components/pages/Home/Speciality/SpecialityDetails/Dentist/Dentist";
+import DentistDoctorsProfile from "./components/pages/Home/Speciality/SpecialityDetails/Dentist/DentistDoctorsProfile";
+import DentistBooking from "./components/pages/Home/Speciality/SpecialityDetails/Dentist/DentistBooking";
 
 const router = createBrowserRouter([
 
@@ -239,7 +242,20 @@ element:<NeurologistDoctorsProfile/>
   element:<OrthopedicBooking/>
 },
 
+// Dentist Details
 
+{
+  path:"dentist",
+  element:<Dentist/>
+},
+{
+  path:"/dentist-doctors-profile/:id",
+  element:<DentistDoctorsProfile/>
+},
+{
+  path:"//dentist-booking/:id",
+  element:<DentistBooking/>
+},
 
 {
 path:"admin",
