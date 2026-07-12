@@ -55,6 +55,8 @@ import DentistBooking from "./components/pages/Home/Speciality/SpecialityDetails
 import Dermatologist from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/Dermatologist";
 import DermatologistDoctorsProfile  from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistDoctorsProfile";
 import DermatologistBooking  from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistBooking";
+import ECG from "./components/pages/Department/Cardiology/ECG/ECG";
+import Echo  from "./components/pages/Department/Cardiology/Echo/Echo";
 
 const router = createBrowserRouter([
 
@@ -111,6 +113,15 @@ element:<Blog/>
 {
 path:"department",
 element:<Department/>
+},
+
+{
+path:"/department/cardiology/ecg",
+element:<ECG/>
+},
+{
+path:"/department/cardiology/service/echo",
+element:<Echo/>
 },
 
 
