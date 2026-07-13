@@ -57,6 +57,7 @@ import DermatologistDoctorsProfile  from "./components/pages/Home/Speciality/Spe
 import DermatologistBooking  from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistBooking";
 import ECG from "./components/pages/Department/Cardiology/ECG/ECG";
 import Echo  from "./components/pages/Department/Cardiology/Echo/Echo";
+import Angiography from "./components/pages/Department/Cardiology/Angiography/Angiography";
 
 const router = createBrowserRouter([
 
@@ -122,6 +123,10 @@ element:<ECG/>
 {
 path:"/department/cardiology/service/echo",
 element:<Echo/>
+},
+{
+path:"/department/cardiology/service/angiography",
+element:<Angiography/>
 },
 
 
