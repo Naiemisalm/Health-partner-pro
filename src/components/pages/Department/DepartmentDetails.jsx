@@ -1,17 +1,17 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { departments } from "../Department/departments";
 import { FaUserMd } from "react-icons/fa";
+import { departments } from "../Department/departments";
 
 
 export default function DepartmentDetails() {
 
 
-  const { slug } = useParams();
+  const { id } = useParams();
 
 
   const department = departments.find(
-    (d) => d.slug === slug
+    (d) => d.id === Number(id)
   );
 
 
@@ -28,17 +28,11 @@ export default function DepartmentDetails() {
 
 
         <Link
-
-          to="/departments"
-
+          to="/department"
           className="text-blue-600 mt-4 inline-block"
-
         >
-
           Go Back
-
         </Link>
-
 
       </div>
 
@@ -52,22 +46,51 @@ export default function DepartmentDetails() {
 
 
 
+  const getServiceLink = (service) => {
+
+    if (department.title === "Cardiology") {
+
+      if (service.name === "ECG") {
+        return "/department/cardiology/ecg";
+      }
+
+      if (service.name === "Echo") {
+        return "/department/cardiology/echo";
+      }
+
+      if (service.name === "Angiography") {
+        return "/department/cardiology/angiography";
+      }
+
+      if (service.name === "Heart Surgery") {
+        return "/department/cardiology/heart-surgery";
+      }
+
+    }
+
+
+    return `/service/${service.id}`;
+
+  };
+
+
+
   return (
 
     <motion.section
 
       initial={{
         opacity:0,
-        y:30,
+        y:30
       }}
 
       animate={{
         opacity:1,
-        y:0,
+        y:0
       }}
 
       transition={{
-        duration:0.5,
+        duration:0.5
       }}
 
       className="max-w-7xl mx-auto px-5 py-16"
@@ -88,14 +111,15 @@ export default function DepartmentDetails() {
         />
 
 
-        <h1 className="text-4xl md:text-5xl font-bold mt-5">
+        <h1 className="text-4xl font-bold mt-5">
 
           {department.title}
 
         </h1>
 
 
-        <p className="max-w-3xl mx-auto text-gray-600 mt-4 leading-8">
+
+        <p className="max-w-3xl mx-auto text-gray-600 mt-4">
 
           {department.details}
 
@@ -108,8 +132,8 @@ export default function DepartmentDetails() {
 
 
 
-
       {/* SERVICES */}
+
 
       <div className="mt-14">
 
@@ -122,45 +146,18 @@ export default function DepartmentDetails() {
 
 
 
-
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
 
 
           {
-            department.services.map((service,index)=>(
+            department.services?.map((service)=>(
 
 
-              <motion.div
+              <div
 
+                key={service.id}
 
-                key={service.slug}
-
-
-                initial={{
-                  opacity:0,
-                  y:30,
-                }}
-
-
-                whileInView={{
-                  opacity:1,
-                  y:0,
-                }}
-
-
-                transition={{
-                  delay:index*0.1,
-                }}
-
-
-                viewport={{
-                  once:true,
-                }}
-
-
-
-                className="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition p-6 text-center"
-
+                className="bg-white rounded-2xl shadow-md p-6 text-center"
 
               >
 
@@ -175,31 +172,22 @@ export default function DepartmentDetails() {
 
 
 
-
                 <div className="flex justify-center items-center gap-2 text-gray-500 mt-3">
 
                   <FaUserMd className="text-blue-600"/>
 
-                  {service.doctors.length} Specialist Doctor
+                  {service.doctors?.length || 0} Specialist Doctor
 
                 </div>
 
 
 
 
-
                 <Link
 
-                  to={
-                    service.slug === "ecg"
-                    ?
-                    "/department/cardiology/ecg"
-                    :
-                    `/department/${department.slug}/service/${service.slug}`
-                  }
+                  to={getServiceLink(service)}
 
-
-                  className="inline-block mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition"
+                  className="inline-block mt-6 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
 
                 >
 
@@ -209,7 +197,7 @@ export default function DepartmentDetails() {
 
 
 
-              </motion.div>
+              </div>
 
 
             ))
@@ -226,18 +214,17 @@ export default function DepartmentDetails() {
 
 
 
-
-
       {/* BACK BUTTON */}
+
 
       <div className="text-center mt-14">
 
 
         <Link
 
-          to="/departments"
+          to="/department"
 
-          className="bg-gray-800 text-white px-7 py-3 rounded-xl hover:bg-gray-900 transition"
+          className="bg-gray-800 text-white px-7 py-3 rounded-xl"
 
         >
 

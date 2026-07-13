@@ -9,12 +9,16 @@ import Layout from "./Layout/Layout";
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
 import Department from "./components/pages/Department/Department";
+import DepartmentDetails from "./components/pages/Department/DepartmentDetails";
+import ServiceDetails from "./components/pages/Department/ServiceDetails";
+
+import ECG from "./components/pages/Department/Cardiology/ECG/ECG";
+import Echo  from "./components/pages/Department/Cardiology/Echo/Echo";
+import Angiography   from "./components/pages/Department/Cardiology/Angiography/Angiography";
+
+
 import Doctor from "./components/pages/Doctors/Doctor/Doctors";
 import Appointment from "./components/pages/Doctors/Appointment/Appointment";
-import DepartmentDetails from "./components/pages/Department/DepartmentDetails";
-
-import AdminDashboard from "./components/Admin/AdminDashboard";
-
 import Payment from "./components/pages/Doctors/Payment/Payment";
 
 import Contact from "./components/pages/Contact/Contact";
@@ -23,292 +27,295 @@ import Blog from "./components/pages/Blog/Blog";
 import Login from "./components/Login/Login";
 import Register from "./components/Login/Register";
 
+import AdminDashboard from "./components/Admin/AdminDashboard";
+
 
 import GeneralConsultation from "./components/pages/Services/GeneralConsultation/GeneralConsultation";
 import DiagnosticServices from "./components/pages/Services/DiagnosticServices/DiagnosticServices";
-
 import CardiologyCare from "./components/pages/Services/GeneralConsultation/CardiologyCare/CardiologyCare";
-
 import WomenHealthcare from "./components/pages/Services/WomenHealthcare/WomenHealthcare";
-
 import ChildHealthcare from "./components/pages/Services/ChildHealthcare/ChildHealthcare";
-
 import Telemedicine from "./components/pages/Services/Telemedicine/Telemedicine";
 
 
 import GeneralPhysician from "./components/pages/Home/Speciality/SpecialityDetails/GeneralPhysician/GeneralPhysician";
-
-
-// Doctor Profile
 import DoctorProfile from "./components/pages/Home/Speciality/SpecialityDetails/GeneralPhysician/DoctorProfile";
-import AppointmentBooking from "./components/pages/Home/Speciality/SpecialityDetails/GeneralPhysician/AppointmentBooking";
+
 import Cardiologist from "./components/pages/Home/Speciality/SpecialityDetails/Cardiologist/Cardiologist";
+
 import Neurologist from "./components/pages/Home/Speciality/SpecialityDetails/Neurologist/Neurologist";
 import NeurologistDoctorsProfile from "./components/pages/Home/Speciality/SpecialityDetails/Neurologist/NeurologistDoctorsProfile";
 import NeurologistBooking from "./components/pages/Home/Speciality/SpecialityDetails/Neurologist/NeurologistBooking";
+
 import Orthopedic from "./components/pages/Home/Speciality/SpecialityDetails/Orthopedic/Orthopedic";
-import OrthopedicDoctorsProfile from "./components/pages/Home//Speciality/SpecialityDetails/Orthopedic/OrthopedicDoctorsProfile";
+import OrthopedicDoctorsProfile from "./components/pages/Home/Speciality/SpecialityDetails/Orthopedic/OrthopedicDoctorsProfile";
 import OrthopedicBooking from "./components/pages/Home/Speciality/SpecialityDetails/Orthopedic/OrthopedicBooking";
+
 import Dentist from "./components/pages/Home/Speciality/SpecialityDetails/Dentist/Dentist";
 import DentistDoctorsProfile from "./components/pages/Home/Speciality/SpecialityDetails/Dentist/DentistDoctorsProfile";
 import DentistBooking from "./components/pages/Home/Speciality/SpecialityDetails/Dentist/DentistBooking";
+
 import Dermatologist from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/Dermatologist";
-import DermatologistDoctorsProfile  from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistDoctorsProfile";
-import DermatologistBooking  from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistBooking";
-import ECG from "./components/pages/Department/Cardiology/ECG/ECG";
-import Echo  from "./components/pages/Department/Cardiology/Echo/Echo";
-import Angiography from "./components/pages/Department/Cardiology/Angiography/Angiography";
+import DermatologistDoctorsProfile from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistDoctorsProfile";
+import DermatologistBooking from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistBooking";
+
+
 
 const router = createBrowserRouter([
 
 {
-path: "/",
+  path:"/",
+  element:<Layout/>,
 
-element: <Layout />,
+  children:[
 
 
-children: [
+    {
+      index:true,
+      element:<Home/>
+    },
 
 
-{
-index:true,
-element:<Home/>
-},
+    {
+      path:"about",
+      element:<About/>
+    },
 
 
-{
-path:"about",
-element:<About/>
-},
+    {
+      path:"login",
+      element:<Login/>
+    },
 
 
+    {
+      path:"register",
+      element:<Register/>
+    },
 
-{
-path:"login",
-element:<Login/>
-},
 
+    {
+      path:"contact",
+      element:<Contact/>
+    },
 
 
-{
-path:"register",
-element:<Register/>
-},
+    {
+      path:"blog",
+      element:<Blog/>
+    },
 
 
 
-{
-path:"contact",
-element:<Contact/>
-},
+    // Department
 
+    {
+      path:"department",
+      element:<Department/>
+    },
 
 
-{
-path:"blog",
-element:<Blog/>
-},
+    // ECG special page
+    {
+      path:"department/cardiology/ecg",
+      element:<ECG/>
+    },
+    {
+      path:"department/cardiology/echo",
+      element:<Echo/>
+    },
+    {
+      path:"department/cardiology/angiography",
+      element:<Angiography/>
+    },
 
+    
 
 
-{
-path:"department",
-element:<Department/>
-},
+    // Dynamic department
+    {
+      path:"department/:id",
+      element:<DepartmentDetails/>
+    },
 
-{
-path:"/department/cardiology/ecg",
-element:<ECG/>
-},
-{
-path:"/department/cardiology/service/echo",
-element:<Echo/>
-},
-{
-path:"/department/cardiology/service/angiography",
-element:<Angiography/>
-},
 
+    // Dynamic service
+    {
+      path:"service/:id",
+      element:<ServiceDetails/>
+    },
 
 
-{
-path:"doctors",
-element:<Doctor/>
-},
 
+    // Doctors
 
+    {
+      path:"doctors",
+      element:<Doctor/>
+    },
 
-{
-path:"payment",
-element:<Payment/>
-},
 
+    {
+      path:"appointment/:id",
+      element:<Appointment/>
+    },
 
 
+    {
+      path:"payment",
+      element:<Payment/>
+    },
 
-// Doctor Appointment
 
-{
-path:"appointment/:id",
-element:<Appointment/>
-},
+    {
+      path:"doctor/:id",
+      element:<DoctorProfile/>
+    },
 
 
 
+    // Services
 
-// Doctor Profile
+    {
+      path:"general-consultation",
+      element:<GeneralConsultation/>
+    },
 
-{
-path:"doctor/:id",
-element:<DoctorProfile/>
-},
 
+    {
+      path:"diagnostic-services",
+      element:<DiagnosticServices/>
+    },
 
 
+    {
+      path:"cardiology-care",
+      element:<CardiologyCare/>
+    },
 
 
-{
-path:"department/:slug",
-element:<DepartmentDetails/>
-},
+    {
+      path:"women-healthcare",
+      element:<WomenHealthcare/>
+    },
 
 
+    {
+      path:"child-healthcare",
+      element:<ChildHealthcare/>
+    },
 
 
+    {
+      path:"telemedicine",
+      element:<Telemedicine/>
+    },
 
-{
-path:"general-consultation",
-element:<GeneralConsultation/>
-},
 
 
+    // Speciality
 
-{
-path:"diagnostic-services",
-element:<DiagnosticServices/>
-},
+    {
+      path:"general-physician",
+      element:<GeneralPhysician/>
+    },
 
 
+    {
+      path:"cardiologist",
+      element:<Cardiologist/>
+    },
 
-{
-path:"cardiology-care",
-element:<CardiologyCare/>
-},
 
+    {
+      path:"neurologist",
+      element:<Neurologist/>
+    },
 
 
-{
-path:"women-healthcare",
-element:<WomenHealthcare/>
-},
+    {
+      path:"neurologist-doctor/:id",
+      element:<NeurologistDoctorsProfile/>
+    },
 
 
+    {
+      path:"neurologist-booking/:id",
+      element:<NeurologistBooking/>
+    },
 
-{
-path:"child-healthcare",
-element:<ChildHealthcare/>
-},
 
+    {
+      path:"orthopedic",
+      element:<Orthopedic/>
+    },
 
 
-{
-path:"telemedicine",
-element:<Telemedicine/>
-},
+    {
+      path:"orthopedic-doctors-profile/:id",
+      element:<OrthopedicDoctorsProfile/>
+    },
 
 
+    {
+      path:"orthopedic-booking/:id",
+      element:<OrthopedicBooking/>
+    },
 
 
+    {
+      path:"dentist",
+      element:<Dentist/>
+    },
 
-// Speciality Details
 
-{
-path:"general-physician",
-element:<GeneralPhysician/>
-},
-{
-path:"cardiologist",
-element:<Cardiologist/>
-},
+    {
+      path:"dentist-doctors-profile/:id",
+      element:<DentistDoctorsProfile/>
+    },
 
-// Neurologist Details
-{
-path:"neurologist",
-element:<Neurologist/>
-},
-{
-path:"/neurologist-doctor/:id",
-element:<NeurologistDoctorsProfile/>
-},
-{
-  path:"/neurologist-booking/:id",
-  element:<NeurologistBooking/>
-},
 
+    {
+      path:"dentist-booking/:id",
+      element:<DentistBooking/>
+    },
 
-// orthopedic Details
 
-{
-  path:"orthopedic",
-  element:<Orthopedic/>
-},
-{
-  path:"/orthopedic-doctors-profile/:id",
-  element:<OrthopedicDoctorsProfile/>
-},
-{
-  path:"//orthopedic-booking/:id",
-  element:<OrthopedicBooking/>
-},
+    {
+      path:"dermatologist",
+      element:<Dermatologist/>
+    },
 
-// Dentist Details
 
-{
-  path:"dentist",
-  element:<Dentist/>
-},
-{
-  path:"/dentist-doctors-profile/:id",
-  element:<DentistDoctorsProfile/>
-},
-{
-  path:"//dentist-booking/:id",
-  element:<DentistBooking/>
-},
+    {
+      path:"dermatologist-doctors-profile/:id",
+      element:<DermatologistDoctorsProfile/>
+    },
 
-// Dermatologist Details
 
-{
-  path:"dermatologist",
-  element:<Dermatologist/>
-}, 
-{
-  path:"/dermatologist-doctors-profile/:id",
-  element:<DermatologistDoctorsProfile/>
-}, 
-{
-  path:"/dermatologist-booking/:id",
-  element:<DermatologistBooking/>
-}, 
+    {
+      path:"dermatologist-booking/:id",
+      element:<DermatologistBooking/>
+    },
 
-{
-path:"admin",
-element:<AdminDashboard/>
-},
 
+    {
+      path:"admin",
+      element:<AdminDashboard/>
+    },
 
 
-],
+  ]
 
-
-},
-
+}
 
 ]);
 
 
 
-createRoot(document.getElementById("root")).render(
+createRoot(
+  document.getElementById("root")
+).render(
 
 <StrictMode>
 

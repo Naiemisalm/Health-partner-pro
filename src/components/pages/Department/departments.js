@@ -7,10 +7,11 @@ import {
   FaStethoscope,
 } from "react-icons/fa";
 
+
 export const departments = [
+
   {
     id: 1,
-    slug: "cardiology",
     title: "Cardiology",
     icon: FaHeartbeat,
     color: "text-red-500",
@@ -20,30 +21,30 @@ export const departments = [
 
     services: [
       {
+        id: 101,
         name: "ECG",
-        slug: "ecg",
         doctors: [
           { name: "Dr. Rahman", specialization: "Cardiologist" },
           { name: "Dr. Hasan", specialization: "Heart Specialist" },
         ],
       },
       {
+        id: 102,
         name: "Echo",
-        slug: "echo",
         doctors: [
           { name: "Dr. Ahmed", specialization: "Cardiac Imaging" },
         ],
       },
       {
+        id: 103,
         name: "Angiography",
-        slug: "angiography",
         doctors: [
           { name: "Dr. Karim", specialization: "Interventional Cardiology" },
         ],
       },
       {
+        id: 104,
         name: "Heart Surgery",
-        slug: "heart-surgery",
         doctors: [
           { name: "Dr. Sinha", specialization: "Cardiac Surgeon" },
         ],
@@ -51,9 +52,9 @@ export const departments = [
     ],
   },
 
+
   {
     id: 2,
-    slug: "dental-care",
     title: "Dental Care",
     icon: FaTooth,
     color: "text-blue-500",
@@ -63,29 +64,29 @@ export const departments = [
 
     services: [
       {
+        id: 201,
         name: "Root Canal",
-        slug: "root-canal",
         doctors: [
           { name: "Dr. Lina", specialization: "Endodontist" },
         ],
       },
       {
+        id: 202,
         name: "Implant",
-        slug: "implant",
         doctors: [
           { name: "Dr. John", specialization: "Oral Surgeon" },
         ],
       },
       {
+        id: 203,
         name: "Braces",
-        slug: "braces",
         doctors: [
           { name: "Dr. Sarah", specialization: "Orthodontist" },
         ],
       },
       {
+        id: 204,
         name: "Whitening",
-        slug: "whitening",
         doctors: [
           { name: "Dr. Ahmed", specialization: "Cosmetic Dentist" },
         ],
@@ -93,9 +94,9 @@ export const departments = [
     ],
   },
 
+
   {
     id: 3,
-    slug: "neurology",
     title: "Neurology",
     icon: FaBrain,
     color: "text-purple-500",
@@ -105,15 +106,15 @@ export const departments = [
 
     services: [
       {
+        id: 301,
         name: "Stroke",
-        slug: "stroke",
         doctors: [
           { name: "Dr. Kamal", specialization: "Neurologist" },
         ],
       },
       {
+        id: 302,
         name: "Migraine",
-        slug: "migraine",
         doctors: [
           { name: "Dr. Rafi", specialization: "Brain Specialist" },
         ],
@@ -121,9 +122,9 @@ export const departments = [
     ],
   },
 
+
   {
     id: 4,
-    slug: "eye-care",
     title: "Eye Care",
     icon: FaEye,
     color: "text-green-500",
@@ -133,15 +134,15 @@ export const departments = [
 
     services: [
       {
+        id: 401,
         name: "Cataract",
-        slug: "cataract",
         doctors: [
           { name: "Dr. Noor", specialization: "Ophthalmologist" },
         ],
       },
       {
+        id: 402,
         name: "LASIK",
-        slug: "lasik",
         doctors: [
           { name: "Dr. Ayesha", specialization: "Eye Surgeon" },
         ],
@@ -149,9 +150,9 @@ export const departments = [
     ],
   },
 
+
   {
     id: 5,
-    slug: "pediatrics",
     title: "Pediatrics",
     icon: FaBaby,
     color: "text-pink-500",
@@ -161,15 +162,15 @@ export const departments = [
 
     services: [
       {
+        id: 501,
         name: "Vaccination",
-        slug: "vaccination",
         doctors: [
           { name: "Dr. Tania", specialization: "Child Specialist" },
         ],
       },
       {
+        id: 502,
         name: "Newborn Care",
-        slug: "newborn-care",
         doctors: [
           { name: "Dr. Rakib", specialization: "Pediatrician" },
         ],
@@ -177,9 +178,9 @@ export const departments = [
     ],
   },
 
+
   {
     id: 6,
-    slug: "general-medicine",
     title: "General Medicine",
     icon: FaStethoscope,
     color: "text-sky-500",
@@ -189,19 +190,20 @@ export const departments = [
 
     services: [
       {
+        id: 601,
         name: "Fever",
-        slug: "fever",
         doctors: [
           { name: "Dr. Sumon", specialization: "General Physician" },
         ],
       },
       {
+        id: 602,
         name: "Diabetes",
-        slug: "diabetes",
         doctors: [
           { name: "Dr. Rina", specialization: "Endocrinologist" },
         ],
       },
     ],
   },
+
 ];
