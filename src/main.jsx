@@ -66,6 +66,9 @@ import Stroke from "./components/pages/Department/Neurology/Stroke/Stroke/Stroke
 import Migraine from "./components/pages/Department/Neurology/Migraine/Migraine";
 import Cataract from "./components/pages/Department/Eye Care/Cataract/Cataract/Cataract";
 import LASIK from "./components/pages/Department/Eye Care/LASIK/LASIK/LASIK";
+import Vaccination from "./components/pages/Department/Pediatrics/Vaccination/Vaccination/Vaccination";
+import NewbornCare from "./components/pages/Department/Pediatrics/Newborn Care/NewbornCare/NewbornCare";
+import Fever from "./components/pages/Department/General Medicine/Fever/Fever/Fever";
 
 
 
@@ -175,6 +178,23 @@ const router = createBrowserRouter([
 {
  path:"department/eye/lasik",
  element:<LASIK/>
+},
+//pediatrics special page
+
+{
+ path:"/department/pediatrics/vaccination",
+ element:<Vaccination/>
+},
+{
+  path:"/department/pediatrics/newborn-care",
+  element:<NewbornCare/>
+},
+
+//General Medicine special page
+
+{
+  path:"/department/general-medicine/fever",
+  element:<Fever/>
 },
 
     // Dynamic department
