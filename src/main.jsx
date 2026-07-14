@@ -58,6 +58,7 @@ import DentistBooking from "./components/pages/Home/Speciality/SpecialityDetails
 import Dermatologist from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/Dermatologist";
 import DermatologistDoctorsProfile from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistDoctorsProfile";
 import DermatologistBooking from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistBooking";
+import RootCanal from "./components/pages/Department/DentalCare/RootCanals/RootCanal/RootCanal";
 
 
 
@@ -128,6 +129,13 @@ const router = createBrowserRouter([
       path:"department/cardiology/angiography",
       element:<Angiography/>
     },
+  
+// Dentral special page
+
+    {
+  path:"department/dental/root-canal",
+  element:<RootCanal/>
+},
 
     
 

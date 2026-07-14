@@ -46,32 +46,58 @@ export default function DepartmentDetails() {
 
 
 
+  // Service Route
   const getServiceLink = (service) => {
 
-    if (department.title === "Cardiology") {
-
-      if (service.name === "ECG") {
-        return "/department/cardiology/ecg";
-      }
-
-      if (service.name === "Echo") {
-        return "/department/cardiology/echo";
-      }
-
-      if (service.name === "Angiography") {
-        return "/department/cardiology/angiography";
-      }
-
-      if (service.name === "Heart Surgery") {
-        return "/department/cardiology/heart-surgery";
-      }
-
-    }
+    const serviceRoutes = {
 
 
-    return `/service/${service.id}`;
+      // Cardiology
+      "ECG": "/department/cardiology/ecg",
+      "Echo": "/department/cardiology/echo",
+      "Angiography": "/department/cardiology/angiography",
+      "Heart Surgery": "/department/cardiology/heart-surgery",
+
+
+
+      // Dental Care
+      "Root Canal": "/department/dental/root-canal",
+      "Implant": "/department/dental/implant",
+      "Braces": "/department/dental/braces",
+      "Whitening": "/department/dental/whitening",
+
+
+
+      // Neurology
+      "Stroke": "/department/neurology/stroke",
+      "Migraine": "/department/neurology/migraine",
+
+
+
+      // Eye Care
+      "Cataract": "/department/eye/cataract",
+      "LASIK": "/department/eye/lasik",
+
+
+
+      // Pediatrics
+      "Vaccination": "/department/pediatrics/vaccination",
+      "Newborn Care": "/department/pediatrics/newborn-care",
+
+
+
+      // General Medicine
+      "Fever": "/department/general-medicine/fever",
+      "Diabetes": "/department/general-medicine/diabetes",
+
+    };
+
+
+
+    return serviceRoutes[service.name] || `/service/${service.id}`;
 
   };
+
 
 
 
