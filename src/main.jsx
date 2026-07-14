@@ -69,6 +69,7 @@ import LASIK from "./components/pages/Department/Eye Care/LASIK/LASIK/LASIK";
 import Vaccination from "./components/pages/Department/Pediatrics/Vaccination/Vaccination/Vaccination";
 import NewbornCare from "./components/pages/Department/Pediatrics/Newborn Care/NewbornCare/NewbornCare";
 import Fever from "./components/pages/Department/General Medicine/Fever/Fever/Fever";
+import Diabetes from "./components/pages/Department/General Medicine/Diabetes/Diabetes/Diabetes";
 
 
 
@@ -196,7 +197,10 @@ const router = createBrowserRouter([
   path:"/department/general-medicine/fever",
   element:<Fever/>
 },
-
+{
+  path:"/department/general-medicine/diabetes",
+  element:<Diabetes/>
+},
     // Dynamic department
     {
       path:"department/:id",
