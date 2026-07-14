@@ -61,6 +61,8 @@ import DermatologistBooking from "./components/pages/Home/Speciality/SpecialityD
 import RootCanal from "./components/pages/Department/DentalCare/RootCanals/RootCanal/RootCanal";
 import Implant from "./components/pages/Department/DentalCare/Implant/Implant/Implant";
 import Braces from "./components/pages/Department/DentalCare/Braces/Brace/Braces";
+import Whitening from "./components/pages/Department/DentalCare/Whitening/Whitening/Whitening";
+import Stroke from "./components/pages/Department/Neurology/Stroke/Stroke/Stroke";
 
 
 
@@ -147,7 +149,16 @@ const router = createBrowserRouter([
  path:"department/dental/braces",
  element:<Braces/>
 },
+{
+ path:"department/dental/whitening",
+ element:<Whitening/>
+},
+// Neurology special page
 
+{
+ path:"/department/neurology/stroke",
+ element:<Stroke/>
+},
 
     // Dynamic department
     {
