@@ -75,7 +75,7 @@ export default function DepartmentDetails() {
 
 
       // Eye Care
-      "Cataract": "/department/eye/cataract",
+      "Cataract": "/department/eye-care/cataract",
       "LASIK": "/department/eye/lasik",
 
 

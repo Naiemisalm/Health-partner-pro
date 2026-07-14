@@ -63,6 +63,9 @@ import Implant from "./components/pages/Department/DentalCare/Implant/Implant/Im
 import Braces from "./components/pages/Department/DentalCare/Braces/Brace/Braces";
 import Whitening from "./components/pages/Department/DentalCare/Whitening/Whitening/Whitening";
 import Stroke from "./components/pages/Department/Neurology/Stroke/Stroke/Stroke";
+import Migraine from "./components/pages/Department/Neurology/Migraine/Migraine";
+import Cataract from "./components/pages/Department/Eye Care/Cataract/Cataract/Cataract";
+import LASIK from "./components/pages/Department/Eye Care/LASIK/LASIK/LASIK";
 
 
 
@@ -158,6 +161,20 @@ const router = createBrowserRouter([
 {
  path:"/department/neurology/stroke",
  element:<Stroke/>
+},
+{
+ path:"/department/neurology/migraine",
+ element:<Migraine/>
+},
+// Eye Care special page
+
+{
+ path:"department/eye-care/cataract",
+ element:<Cataract/>
+},
+{
+ path:"department/eye/lasik",
+ element:<LASIK/>
 },
 
     // Dynamic department
