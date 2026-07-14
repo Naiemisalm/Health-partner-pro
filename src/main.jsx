@@ -59,6 +59,8 @@ import Dermatologist from "./components/pages/Home/Speciality/SpecialityDetails/
 import DermatologistDoctorsProfile from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistDoctorsProfile";
 import DermatologistBooking from "./components/pages/Home/Speciality/SpecialityDetails/Dermatologist/DermatologistBooking";
 import RootCanal from "./components/pages/Department/DentalCare/RootCanals/RootCanal/RootCanal";
+import Implant from "./components/pages/Department/DentalCare/Implant/Implant/Implant";
+import Braces from "./components/pages/Department/DentalCare/Braces/Brace/Braces";
 
 
 
@@ -137,7 +139,14 @@ const router = createBrowserRouter([
   element:<RootCanal/>
 },
 
-    
+    {
+ path:"department/dental/implant",
+ element:<Implant/>
+},
+{
+ path:"department/dental/braces",
+ element:<Braces/>
+},
 
 
     // Dynamic department
