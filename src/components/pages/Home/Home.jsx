@@ -1,3 +1,4 @@
+import Blog from "../Blog/Blog";
 import Hero from "../Home/Hero/Hero";
 import Services from "../Services/Services";
 import DoctorCard from "./DoctorCard/DoctorCard";
@@ -19,6 +20,7 @@ const About = () => {
            <HomePage/>
            <HealthCheckupPackages/>
            <Testimonials/>
+           <Blog showAll={false} />
            
             {/*  <MedicalRecords/> */}
     </div>

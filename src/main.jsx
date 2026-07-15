@@ -70,6 +70,7 @@ import Vaccination from "./components/pages/Department/Pediatrics/Vaccination/Va
 import NewbornCare from "./components/pages/Department/Pediatrics/Newborn Care/NewbornCare/NewbornCare";
 import Fever from "./components/pages/Department/General Medicine/Fever/Fever/Fever";
 import Diabetes from "./components/pages/Department/General Medicine/Diabetes/Diabetes/Diabetes";
+import BlogDetails from "./components/pages/Blog/BlogDetails";
 
 
 
@@ -115,6 +116,10 @@ const router = createBrowserRouter([
     {
       path:"blog",
       element:<Blog/>
+    },
+    {
+      path:"/blog-details/:id",
+      element:<BlogDetails/>
     },
 
 
