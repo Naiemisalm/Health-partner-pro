@@ -1,1 +1,535 @@
-import { useRef } from "react"; import { Link, useNavigate } from "react-router-dom"; import { FaBrain, FaHeartbeat, FaBone, FaUserMd, FaTooth, FaEye, FaBaby, FaArrowLeft, FaArrowRight, } from "react-icons/fa"; const specialities = [ { name: "General Physician", icon: <FaUserMd />, color: "text-teal-600", path: "/general-physician", }, { name: "Cardiologist", icon: <FaHeartbeat />, color: "text-red-500", path: "/cardiologist", }, { name: "Neurologist", icon: <FaBrain />, color: "text-purple-500", path: "/neurologist", }, { name: "Orthopedic", icon: <FaBone />, color: "text-gray-600", path: "/orthopedic", }, { name: "Dentist", icon: <FaTooth />, color: "text-yellow-600", path: "/dentist", }, { name: "Eye Specialist", icon: <FaEye />, color: "text-blue-500", path: "/eye-specialist", }, { name: "Pediatrician", icon: <FaBaby />, color: "text-pink-500", path: "/pediatrician", }, { name: "Dermatologist", icon: <FaUserMd />, color: "text-orange-500", path: "/dermatologist", }, { name: "Gynecologist", icon: <FaUserMd />, color: "text-rose-500", path: "/gynecologist", }, { name: "ENT Specialist", icon: <FaUserMd />, color: "text-cyan-500", path: "/ent-specialist", }, { name: "Psychiatrist", icon: <FaUserMd />, color: "text-indigo-500", path: "/psychiatrist", }, { name: "Urologist", icon: <FaUserMd />, color: "text-green-600", path: "/urologist", }, { name: "Nephrologist", icon: <FaUserMd />, color: "text-sky-600", path: "/nephrologist", }, { name: "Pulmonologist", icon: <FaUserMd />, color: "text-emerald-600", path: "/pulmonologist", }, { name: "Gastroenterologist", icon: <FaUserMd />, color: "text-amber-600", path: "/gastroenterologist", }, { name: "Endocrinologist", icon: <FaUserMd />, color: "text-lime-600", path: "/endocrinologist", }, { name: "Oncologist", icon: <FaUserMd />, color: "text-red-700", path: "/oncologist", }, { name: "General Surgeon", icon: <FaUserMd />, color: "text-slate-600", path: "/general-surgeon", }, ]; export default function Speciality() { const scrollRef = useRef(null); const navigate = useNavigate(); const scrollLeft = () => { scrollRef.current?.scrollBy({ left: -320, behavior: "smooth", }); }; const scrollRight = () => { scrollRef.current?.scrollBy({ left: 320, behavior: "smooth", }); }; const handleChange = (e) => { if (e.target.value) { navigate(e.target.value); } }; return ( <section className="bg-[#f1fffd] py-10"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8"> <h2 className="text-2xl md:text-3xl font-bold text-gray-800"> Find Doctors by Speciality </h2> <p className="text-gray-500 text-sm mt-2 sm:mt-0"> Choose the right specialist for your healthcare needs. </p> </div> {/* Mobile Dropdown */} <div className="md:hidden"> <select defaultValue="" onChange={handleChange} className="w-full rounded-xl border border-gray-300 bg-white p-4 text-gray-700 shadow-sm focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500" > <option value="" disabled> Select a Speciality </option> {specialities.map((item, index) => ( <option key={index} value={item.path}> {item.name} </option> ))} </select> </div> {/* Desktop Slider */} <div className="hidden md:flex items-center gap-4"> <button onClick={scrollLeft} className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg transition hover:bg-cyan-600 hover:text-white" > <FaArrowLeft /> </button> <div ref={scrollRef} className="flex flex-1 gap-5 overflow-x-auto scroll-smooth" style={{ scrollbarWidth: "none", msOverflowStyle: "none", }} > {specialities.map((item, index) => ( <Link key={index} to={item.path} className="group min-w-[180px] flex-shrink-0 rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-cyan-500 hover:shadow-xl" > <div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gray-50 text-4xl ${item.color} transition group-hover:scale-110`} > {item.icon} </div> <h3 className="mt-5 text-center text-sm font-semibold text-gray-700"> {item.name} </h3> </Link> ))} </div> <button onClick={scrollRight} className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-lg transition hover:bg-cyan-600 hover:text-white" > <FaArrowRight /> </button> </div> </div> </section> ); }
+import { useRef } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import {
+  FaBrain,
+  FaHeartbeat,
+  FaBone,
+  FaUserMd,
+  FaTooth,
+  FaEye,
+  FaBaby,
+  FaArrowLeft,
+  FaArrowRight,
+  FaAllergies,
+  FaFemale,
+  FaLungs,
+  FaStethoscope,
+} from "react-icons/fa";
+
+
+const specialities = [
+  {
+    name: "General Physician",
+    icon: <FaUserMd />,
+    color: "text-teal-600",
+    path: "general-physician",
+  },
+  {
+    name: "Cardiologist",
+    icon: <FaHeartbeat />,
+    color: "text-red-500",
+    path: "cardiologist",
+  },
+  {
+    name: "Neurologist",
+    icon: <FaBrain />,
+    color: "text-purple-500",
+    path: "neurologist",
+  },
+  {
+    name: "Orthopedic",
+    icon: <FaBone />,
+    color: "text-gray-600",
+    path: "orthopedic",
+  },
+  {
+    name: "Dentist",
+    icon: <FaTooth />,
+    color: "text-yellow-500",
+    path: "dentist",
+  },
+  {
+    name: "Eye Specialist",
+    icon: <FaEye />,
+    color: "text-blue-500",
+    path: "eye-specialist",
+  },
+  {
+    name: "Child Specialist",
+    icon: <FaBaby />,
+    color: "text-pink-500",
+    path: "pediatrician",
+  },
+  {
+    name: "Dermatologist",
+    icon: <FaAllergies />,
+    color: "text-orange-500",
+    path: "dermatologist",
+  },
+  {
+    name: "Gynecologist",
+    icon: <FaFemale />,
+    color: "text-rose-500",
+    path: "gynecologist",
+  },
+  {
+    name: "Pulmonologist",
+    icon: <FaLungs />,
+    color: "text-green-500",
+    path: "pulmonologist",
+  },
+  {
+    name: "Specialist Doctor",
+    icon: <FaStethoscope />,
+    color: "text-cyan-600",
+    path: "specialist",
+  },
+];
+
+
+export default function Speciality({
+
+  title = "Find Doctors by Speciality",
+
+  description = "Choose the right specialist for your healthcare needs.",
+
+  online = false,
+
+  layout = "slider",
+
+}) {
+
+
+  const scrollRef = useRef(null);
+
+  const navigate = useNavigate();
+
+
+
+  const scroll = (value)=>{
+
+    scrollRef.current?.scrollBy({
+
+      left:value,
+
+      behavior:"smooth"
+
+    });
+
+  };
+
+
+
+  const getPath = (path)=>{
+
+    return online
+
+    ? `/online-consultation/${path}`
+
+    : `/${path}`;
+
+  };
+
+
+
+return (
+
+<section className="bg-gradient-to-b from-cyan-50 to-white py-14">
+
+
+<div className="max-w-7xl mx-auto px-5">
+
+
+{/* Heading */}
+
+<div className="mb-10">
+
+
+<h2 className="
+text-3xl md:text-4xl
+font-bold
+text-gray-800
+">
+
+{title}
+
+</h2>
+
+
+<p className="
+text-gray-500
+mt-2
+">
+
+{description}
+
+</p>
+
+
+</div>
+
+
+
+
+
+{/* Mobile Dropdown */}
+
+
+<div className="md:hidden">
+
+
+<select
+
+defaultValue=""
+
+onChange={(e)=>navigate(e.target.value)}
+
+className="
+w-full
+rounded-2xl
+bg-white
+p-4
+shadow-md
+border border-gray-200
+text-gray-700
+"
+
+>
+
+
+<option value="" disabled>
+
+Select speciality
+
+</option>
+
+
+
+{
+
+specialities.map((item,index)=>(
+
+<option
+
+key={index}
+
+value={getPath(item.path)}
+
+>
+
+{item.name}
+
+</option>
+
+))
+
+}
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+{
+
+layout === "grid" ? (
+
+
+
+/* 3 Column Card */
+
+
+<div className="
+grid
+grid-cols-1
+sm:grid-cols-2
+lg:grid-cols-3
+gap-6
+mt-6
+">
+
+
+{
+
+specialities.map((item,index)=>(
+
+
+<Link
+
+key={index}
+
+to={getPath(item.path)}
+
+className="
+bg-white
+rounded-3xl
+p-8
+text-center
+shadow-md
+border border-gray-100
+hover:-translate-y-2
+hover:shadow-xl
+hover:border-cyan-400
+transition-all
+"
+
+
+>
+
+
+<div
+
+className={`
+mx-auto
+h-20
+w-20
+rounded-full
+bg-cyan-50
+flex
+items-center
+justify-center
+text-4xl
+${item.color}
+`}
+
+>
+
+{item.icon}
+
+</div>
+
+
+
+<h3 className="
+mt-5
+font-semibold
+text-gray-700
+">
+
+{item.name}
+
+</h3>
+
+
+
+<p className="
+text-sm
+text-cyan-600
+mt-2
+font-medium
+">
+
+{online ? "Consult Online" : "Book Appointment"}
+
+</p>
+
+
+
+</Link>
+
+
+))
+
+}
+
+
+</div>
+
+
+
+) : (
+
+
+
+/* Slider */
+
+
+<div className="
+hidden md:flex
+items-center
+gap-5
+mt-5
+">
+
+
+<button
+
+onClick={()=>scroll(-350)}
+
+className="
+h-12 w-12
+rounded-full
+bg-white
+shadow-lg
+flex
+items-center
+justify-center
+hover:bg-cyan-600
+hover:text-white
+transition
+"
+
+>
+
+<FaArrowLeft/>
+
+</button>
+
+
+
+
+<div
+
+ref={scrollRef}
+
+className="
+flex
+gap-6
+overflow-x-auto
+py-5
+scroll-smooth
+"
+
+>
+
+
+{
+
+specialities.map((item,index)=>(
+
+
+<Link
+
+key={index}
+
+to={getPath(item.path)}
+
+className="
+min-w-[190px]
+bg-white
+rounded-3xl
+p-7
+text-center
+shadow-md
+border border-gray-100
+hover:-translate-y-2
+hover:shadow-xl
+hover:border-cyan-400
+transition-all
+"
+
+>
+
+
+<div
+
+className={`
+mx-auto
+h-20
+w-20
+rounded-full
+bg-cyan-50
+flex
+items-center
+justify-center
+text-4xl
+${item.color}
+`}
+
+>
+
+{item.icon}
+
+</div>
+
+
+
+
+<h3 className="
+mt-5
+font-semibold
+text-gray-700
+text-sm
+">
+
+{item.name}
+
+</h3>
+
+
+
+
+<p className="
+text-xs
+text-cyan-600
+mt-2
+font-medium
+">
+
+{online ? "Consult Online" : "Book Appointment"}
+
+</p>
+
+
+
+</Link>
+
+
+))
+
+}
+
+
+</div>
+
+
+
+
+
+<button
+
+onClick={()=>scroll(350)}
+
+className="
+h-12 w-12
+rounded-full
+bg-white
+shadow-lg
+flex
+items-center
+justify-center
+hover:bg-cyan-600
+hover:text-white
+transition
+"
+
+>
+
+<FaArrowRight/>
+
+</button>
+
+
+</div>
+
+
+)
+
+
+}
+
+
+
+</div>
+
+
+</section>
+
+);
+
+}

@@ -1,64 +1,29 @@
-import React, { useState } from "react";
-import DoctorList from "./components/doctor/DoctorList";
-import ConsultationRoom from "./components/doctor/ConsultationRoom";
+import Speciality from "../Home/Speciality/Speciality";
 
 
 const OnlineConsultation = () => {
 
-  const [selectedDoctor, setSelectedDoctor] = useState(null);
-
 
   return (
 
-    <section className="min-h-screen bg-[#F8FAFC] py-10 px-4 sm:px-6 lg:px-8">
+    <section className="
+    min-h-screen
+    bg-[#F8FAFC]
+    py-10
+    ">
 
 
-      <div className="max-w-7xl mx-auto">
+      <Speciality
 
+        online={true}
 
-        {/* Header */}
+        layout="grid"
 
-        <div className="mb-10">
+        title="Consult Online with Specialist Doctors"
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-[#243b5a]">
-            Online Consultation
-          </h1>
+        description="Get expert medical advice from experienced doctors anytime, anywhere."
 
-
-          <p className="text-gray-600 mt-2">
-            Consult with experienced doctors from anywhere.
-          </p>
-
-        </div>
-
-
-
-
-
-        {
-          selectedDoctor ? (
-
-            <ConsultationRoom
-              doctor={selectedDoctor}
-              onBack={() => setSelectedDoctor(null)}
-            />
-
-          )
-
-          :
-
-          (
-
-            <DoctorList
-              onSelect={setSelectedDoctor}
-            />
-
-          )
-        }
-
-
-
-      </div>
+      />
 
 
     </section>

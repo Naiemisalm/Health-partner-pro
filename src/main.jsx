@@ -116,7 +116,35 @@ const router = createBrowserRouter([
       path:"/online-consultation",
       element:<OnlineConsultation/>
     },
+{
+  path:"online-consultation/general-physician",
+  element:<GeneralPhysician/>
+},
 
+{
+  path:"online-consultation/cardiologist",
+  element:<Cardiologist/>
+},
+
+{
+  path:"online-consultation/neurologist",
+  element:<Neurologist/>
+},
+
+{
+  path:"online-consultation/orthopedic",
+  element:<Orthopedic/>
+},
+
+{
+  path:"online-consultation/dentist",
+  element:<Dentist/>
+},
+
+{
+  path:"online-consultation/dermatologist",
+  element:<Dermatologist/>
+},
 
     {
       path:"blog",
