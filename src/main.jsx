@@ -71,6 +71,7 @@ import NewbornCare from "./components/pages/Department/Pediatrics/Newborn Care/N
 import Fever from "./components/pages/Department/General Medicine/Fever/Fever/Fever";
 import Diabetes from "./components/pages/Department/General Medicine/Diabetes/Diabetes/Diabetes";
 import BlogDetails from "./components/pages/Blog/BlogDetails";
+import OnlineConsultation from "./components/pages/OnlineConsultation/OnlineConsultation";
 
 
 
@@ -110,6 +111,10 @@ const router = createBrowserRouter([
     {
       path:"contact",
       element:<Contact/>
+    },
+    {
+      path:"/online-consultation",
+      element:<OnlineConsultation/>
     },
 
 

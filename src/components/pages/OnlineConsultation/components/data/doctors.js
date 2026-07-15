@@ -1,0 +1,111 @@
+export const doctors = [
+  {
+    id: 1,
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Dr. Ahmed Rahman",
+    specialty: "Cardiologist",
+    experience: "10 Years",
+    rating: 4.9,
+    fee: "$20",
+    available: true,
+  },
+
+  {
+    id: 2,
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    name: "Dr. Sarah Khan",
+    specialty: "Neurologist",
+    experience: "8 Years",
+    rating: 4.8,
+    fee: "$18",
+    available: true,
+  },
+
+  {
+    id: 3,
+    image: "https://randomuser.me/api/portraits/men/45.jpg",
+    name: "Dr. Mahmud Hasan",
+    specialty: "Diabetologist",
+    experience: "12 Years",
+    rating: 4.7,
+    fee: "$25",
+    available: false,
+  },
+
+  {
+    id: 4,
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    name: "Dr. Nusrat Jahan",
+    specialty: "Dermatologist",
+    experience: "7 Years",
+    rating: 4.9,
+    fee: "$15",
+    available: true,
+  },
+
+  {
+    id: 5,
+    image: "https://randomuser.me/api/portraits/men/52.jpg",
+    name: "Dr. Fahim Ahmed",
+    specialty: "Orthopedic",
+    experience: "11 Years",
+    rating: 4.6,
+    fee: "$22",
+    available: true,
+  },
+
+  {
+    id: 6,
+    image: "https://randomuser.me/api/portraits/women/55.jpg",
+    name: "Dr. Maria Islam",
+    specialty: "Nutritionist",
+    experience: "6 Years",
+    rating: 4.8,
+    fee: "$12",
+    available: false,
+  },
+
+  {
+    id: 7,
+    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    name: "Dr. Hasan Ali",
+    specialty: "General Physician",
+    experience: "15 Years",
+    rating: 4.9,
+    fee: "$30",
+    available: true,
+  },
+
+  {
+    id: 8,
+    image: "https://randomuser.me/api/portraits/women/32.jpg",
+    name: "Dr. Ayesha Rahman",
+    specialty: "Gynecologist",
+    experience: "9 Years",
+    rating: 4.7,
+    fee: "$20",
+    available: true,
+  },
+
+  {
+    id: 9,
+    image: "https://randomuser.me/api/portraits/men/61.jpg",
+    name: "Dr. Tanvir Hossain",
+    specialty: "ENT Specialist",
+    experience: "13 Years",
+    rating: 4.6,
+    fee: "$17",
+    available: false,
+  },
+
+  {
+    id: 10,
+    image: "https://randomuser.me/api/portraits/women/90.jpg",
+    name: "Dr. Sabila Ahmed",
+    specialty: "Psychologist",
+    experience: "5 Years",
+    rating: 4.8,
+    fee: "$16",
+    available: true,
+  },
+];

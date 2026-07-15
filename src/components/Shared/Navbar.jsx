@@ -17,6 +17,7 @@ const navItems = [
   { name:"Home", path:"/" },
   { name:"Department", path:"/department" },
   { name:"Doctors", path:"/doctors" },
+  { name:"Online Consultation", path:"/online-consultation" },
   { name:"About", path:"/about" },
   { name:"Contact", path:"/contact" },
 ];
